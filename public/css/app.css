@@ -7,26 +7,7 @@
 body {
   max-width: 940px;
   margin: 0 auto;
-}
-
-.raw {
-  width: 100%;
-}
-
-.raw .col-3 {
-  float: left;
-  width: 32%;
-  margin-right: 2%;
-  margin-bottom: 2%;
-}
-
-.raw .col-3:nth-child(3n) {
-  margin-right: 0;
-}
-
-.main-nav {
-  max-width: 75vh;
-  color: #fcdb00;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .app-wrapper {
@@ -53,12 +34,15 @@ body {
           align-items: center;
   max-width: 930px;
   margin: 0 auto;
-  padding: 50px 90px;
+  padding: 20px 90px;
+}
+
+.app-wrapper #header .main-nav .menu-bar {
+  flex-basis: 33.33%;
 }
 
 .app-wrapper #header .main-nav .logo-box {
-  -webkit-box-flex: 1;
-          flex: 1;
+  flex-basis: 33.33%;
   padding-left: 10px;
 }
 
@@ -69,53 +53,25 @@ body {
 .app-wrapper #header .main-nav .logo-box .brandname {
   display: inline-block;
   text-align: center;
+  color: #000;
   -webkit-transform: translateY(-15px);
           transform: translateY(-15px);
 }
 
-.app-wrapper #header .main-nav .wrapper {
-  -webkit-box-flex: 1;
-          flex: 1;
-}
-
-.app-wrapper #header .main-nav .wrapper ul {
-  list-style-type: none;
-  width: 100%;
-}
-
-.app-wrapper #header .main-nav .wrapper ul:after {
-  clear: both;
-  display: block;
-  content: "";
-}
-
-.app-wrapper #header .main-nav .wrapper li {
-  float: left;
-  padding: 16px;
-  flex-basis: 20%;
-}
-
-.app-wrapper #header .main-nav .wrapper li:not(:last-child) {
-  padding-right: 6px;
-}
-
-.app-wrapper #header .main-nav .wrapper li:after {
-  clear: both;
-  display: block;
-  content: "";
-}
-
-.app-wrapper #header .main-nav .wrapper a {
-  color: #000;
-  text-decoration: none;
-  display: block;
+.app-wrapper #header .main-nav .socials {
+  flex-basis: 33.33%;
   text-align: center;
+  color: #fff;
 }
 
-.app-wrapper #header .main-nav .wrapper a:after {
-  clear: both;
-  display: block;
-  content: "";
+.app-wrapper #header .main-nav .socials .social {
+  background: #000;
+}
+
+.app-wrapper #header .main-nav .socials .social i {
+  padding: 8px;
+  text-decoration: none;
+  color: #fcdb00;
 }
 
 .app-wrapper #header .lead-banner {
@@ -129,7 +85,7 @@ body {
   -webkit-box-pack: center;
           justify-content: center;
   justify-items: center;
-  padding: 0px 90px;
+  padding: 210px 0px;
   text-align: center;
 }
 
@@ -137,11 +93,7 @@ body {
   flex-basis: 100%;
 }
 
-.app-wrapper #header .lead-banner .lead-banner-text h2 {
-  padding-bottom: 25px;
-}
-
-.app-wrapper #header .lead-banner .lead-banner-text h4 {
+.app-wrapper #header .lead-banner .lead-banner-text h1 {
   padding-bottom: 25px;
 }
 
@@ -154,7 +106,9 @@ body {
 }
 
 .app-wrapper #header .lead-banner .lead-banner-icons .icon {
-  padding-right: 10px;
+  padding: 18px;
+  border: 1px solid #000;
+  border-radius: 100%;
 }
 
 .app-wrapper #features {
@@ -200,12 +154,21 @@ body {
 .app-wrapper #features .feature-wrapper .feature-boxes .box .content .lead-banner-image {
   height: auto;
   max-width: 100%;
+  top: -50%;
+}
+
+.app-wrapper #features .feature-wrapper .feature-boxes .box .content h2 {
+  padding-bottom: 8px;
+}
+
+.app-wrapper #features .feature-wrapper .feature-boxes .box .content p {
+  color: #c4c4c4;
 }
 
 .app-wrapper #footer {
   width: auto;
   background: #000;
-  color: #fff;
+  color: #898989;
   overflow: hidden;
 }
 
@@ -222,9 +185,15 @@ body {
 
 .app-wrapper #footer .footer-banner-text h2 {
   color: #fcdb00;
+  padding-bottom: 8px;
 }
 
-.app-wrapper #footer .footer-banner-text .btn {
+.app-wrapper #footer .footer-banner-text .footer-btn-area {
+  padding-bottom: 80px;
+  padding-top: 40px;
+}
+
+.app-wrapper #footer .footer-banner-text .footer-btn-area .btn {
   background: #fcdb00;
   color: #000;
   border-radius: 8px;
@@ -233,25 +202,9 @@ body {
   margin-left: 15px;
 }
 
-.app-wrapper #footer .footer-banner-text .footer-email-inp {
+.app-wrapper #footer .footer-banner-text .footer-btn-area .footer-email-inp {
   width: 390px;
   padding: 14px;
-  border-radius: 8px;
-}
-
-.app-wrapper #footer .socials {
-  padding-top: 60px;
-  text-align: center;
-  color: #fff;
-}
-
-.app-wrapper #footer .socials a {
-  color: #000;
-  padding: 7px;
-  font-size: 30px;
-  text-decoration: none;
-  margin: 5px 2px;
-  background-color: #fcdb00;
   border-radius: 8px;
 }
 
@@ -275,5 +228,11 @@ body {
 
 .app-wrapper #footer .pages .page ul {
   list-style-type: none;
+}
+
+@media screen and (max-width: 600px) {
+  .main-nav {
+    padding: 20px 10px !important;
+  }
 }
 
