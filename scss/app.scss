@@ -1,0 +1,223 @@
+@import "mixins";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 940px;
+    margin:0 auto;
+}
+
+.raw{
+
+    width:100%;
+    .col-3{
+        @include grid(3, 2%);
+    }
+    
+}
+
+.main-nav{
+    max-width: 75vh;
+    color:#fcdb00;
+}
+
+.app-wrapper{
+
+/* 1.header section */
+#header{
+    width: auto;
+    background: #fcdb00;
+    padding-bottom: 105px;
+    overflow: hidden;
+    .main-nav{
+
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        max-width:930px;
+        margin:0 auto;
+        padding:50px 90px;
+        .logo-box{
+            flex: 1;
+            padding-left: 10px;
+            .logo{
+                display: inline-block; 
+            }
+            .brandname{
+                display: inline-block;
+                text-align: center;
+                transform: translateY(-15px);
+            }
+        }
+
+        .wrapper{
+            flex: 1;
+            ul{
+                list-style-type: none;
+                width:100%;
+                
+                @include clearfix;
+            }
+            li{
+                float: left;
+                padding:16px;
+               // width: 14%;
+               flex-basis: 20%;
+               &:not(:last-child){
+                    padding-right: 6px;
+                }
+                @include clearfix;
+            }
+            a{
+                color:#000;
+                text-decoration: none;
+               
+                display: block;
+                text-align:center;
+                @include clearfix;
+            }
+        } 
+    }
+
+    .lead-banner{
+        display: flex;
+        flex-direction: column;
+        max-width: 900px;
+        margin: 0 auto;
+        justify-content: center;
+        justify-items: center;
+        padding:0px 90px;
+        text-align: center;
+        .lead-banner-text{
+            flex-basis: 100%;
+            h2{
+                padding-bottom: 25px;
+            }
+            h4{
+                padding-bottom: 25px;
+            }
+            p{
+                padding-bottom: 25px;
+            }
+        }
+        .lead-banner-icons{
+            flex-basis: 100%;
+            .icon{
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+ /* 2.features section */
+ #features{
+    width: auto;
+    background: #fff;
+    overflow: hidden;
+    .feature-wrapper{ 
+        padding-bottom: 160px;
+        .features-banner-text{
+            text-align: center;
+            padding-top: 120px;
+            max-width: 710px;
+            margin:0 auto;
+            padding-bottom: 90px;
+
+            h1{
+                padding-bottom: 10px;
+            }
+        }
+        .feature-boxes{
+            display: flex;
+            flex-direction: row;
+            flex-wrap:wrap;
+            padding:0px 50px;
+            .box{
+                flex-basis: 33.333%;
+                
+                .content{
+                    padding:0px 5px 30px 5px;
+                    .lead-banner-image{
+                        height: auto;
+                        max-width:100%;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+/* 3.footer section */
+#footer{
+        width: auto;
+        background: #000;
+        color:#fff;
+        overflow: hidden;
+
+        .footer-banner-text{
+            text-align:center;
+            padding-top: 95px;
+            max-width:716px;
+            margin:0 auto;
+            .footer-header{
+                padding-bottom: 15px;
+            }
+            h2{
+                color:#fcdb00;
+            }
+            .btn{
+                background: #fcdb00;
+                color:#000;
+                border-radius: 8px;
+                width:130px;
+                padding: 14px;
+                margin-left: 15px;
+            }
+            .footer-email-inp{
+                width:390px;
+                padding: 14px;
+                border-radius: 8px;
+            }
+            
+        }
+        
+        .socials{
+            padding-top: 60px;
+            text-align: center;
+            color:#fff;
+            a{
+                color:#000;
+                padding: 7px;
+                font-size: 30px;
+                //width: 50px;
+                text-decoration: none;
+                margin: 5px 2px;
+                background-color: #fcdb00;
+                border-radius: 8px;
+            }         
+        }
+        
+        .pages{
+            padding-top: 60px;
+            padding-bottom: 130px;
+            display: flex;
+            flex-direction: row;
+            max-width: 840px;
+            margin: 0 auto;
+            transform: translateX(20px);
+            
+            .page{
+                flex-basis:20%;
+                ul{
+                    list-style-type: none; 
+                }
+            }
+        }
+    }
+}
