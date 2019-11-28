@@ -7,9 +7,13 @@
 }
 
 body{
-    max-width: 940px;
+    max-width: 1400px;
     margin:0 auto;
     font-family: 'Open Sans', sans-serif;
+}
+
+.box-padding-top{
+    padding-top:10%;
 }
 
 .app-wrapper{
@@ -75,11 +79,16 @@ body{
             text-align: center;
             .lead-banner-text{
                 flex-basis: 100%;
+                padding: 0px 10%;
                 h1{
                     padding-bottom: 25px;
+                    font-size: 25px;
+                    font-weight: bold;
                 }
                 p{
                     padding-bottom: 25px;
+                    color:#646131;
+                    font-size: 14px;
                 }
             
             }
@@ -107,9 +116,14 @@ body{
             max-width: 710px;
             margin:0 auto;
             padding-bottom: 90px;
+            //padding: 0px 10%;
 
             h1{
                 padding-bottom: 10px;
+            }
+            h3{
+                color:#656a71;
+                font-size: 14px;
             }
         }
         .feature-boxes{
@@ -132,7 +146,7 @@ body{
                         padding-bottom: 8px;
                     }
                     p{
-                        color:#c4c4c4;
+                        color:#656a71;
                     }
                 }
 
@@ -154,6 +168,7 @@ body{
             padding-top: 95px;
             max-width:716px;
             margin:0 auto;
+           
             .footer-header{
                 padding-bottom: 15px;
             }
@@ -172,6 +187,8 @@ body{
                     width:130px;
                     padding: 14px;
                     margin-left: 15px;
+                    font-weight: bold;
+                    text-transform: uppercase;
                 }
                 .footer-email-inp{
                     width:390px;
@@ -189,16 +206,127 @@ body{
             flex-direction: row;
             max-width: 840px;
             margin: 0 auto;
-            transform: translateX(20px);
+            //transform: translateX(20px);
             
             .page{
                 flex-basis:20%;
+                padding-left:10px;
                 ul{
                     list-style-type: none; 
                 }
             }
         }
     }
+}
+
+@media screen and (max-width: 800px) {
+
+
+    /* 2.features section */
+ #features{
+    width: auto;
+    background: #fff;
+    overflow: hidden;
+    .feature-wrapper{ 
+        padding-bottom: 160px;
+
+        .features-banner-text{
+            text-align: center;
+            padding-top: 120px;
+            max-width: 710px;
+            margin:0 auto;
+            padding-bottom: 90px;
+            padding: 0px 10%;
+    
+            h1{
+                padding-bottom: 10px;
+            }
+            h3{
+                color:#656a71;
+                font-size: 14px;
+            }
+        }
+       
+        .feature-boxes{
+            display: flex;
+            flex-direction: column;
+            flex-wrap:wrap;
+            padding:0px 50px;
+            .box{
+
+                flex:1;
+                flex-basis: 100% !important;
+                
+                .content{
+                   // padding:0px 5px 30px 5px;
+                    .lead-banner-image{
+                        height: auto;
+                        max-width:100%;
+                        // left: 50%;
+                        // transform: translateX(-50%);
+                        //transform: translateY(-50%);
+                        //background: #fcdb00;
+                    }
+                    h2{
+                        padding-bottom: 8px;
+                    }
+                    p{
+                        color:#656a71;
+                    }
+                }
+
+            }
+           
+        }
+    }
+}
+
+  
+
+    .footer-banner-text{
+        text-align:center;
+        padding-top: 95px;
+        max-width:716px;
+        margin:0 auto;
+        padding: 25px 10%;
+    }
+    .pages{
+        transform: translateX(5px);
+        max-width: 840px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        padding-bottom: 130px;
+        .page{
+            flex-basis:25% !important;
+            padding-left:10px;
+            padding: 0px 10%;
+            ul{
+                list-style-type: none; 
+            }
+        }
+    }
+
+    .footer-btn-area{
+        display: flex;
+        input{
+
+            &.footer-email-inp{
+                flex-basis: 50%;
+                width:50px !important;
+                padding: 14px;
+                border-radius: 8px;
+              
+            }
+            &.btn{
+                flex-basis: 30%;
+                background: rgb(110, 156, 40);
+                width:10px !important;
+            }
+            
+        }
+    }
+
 }
 
 @media screen and (max-width: 600px) {
